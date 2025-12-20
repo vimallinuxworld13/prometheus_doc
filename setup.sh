@@ -16,5 +16,7 @@ for target linux node:
 
 # yum install docker -y
 # systemctl start docker
+docker run -dit -p 9113:9113 -p 8080:8080 nginx/nginx-prometheus-exporter:1.5.1 --nginx.scrape-uri=http://127.0.0.1:8080/stub_status
+
 
 
