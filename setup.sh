@@ -13,3 +13,8 @@ for target linux node:
 # ./node_exporter
 
 
+
+# yum install docker -y
+# systemctl start docker
+
+
