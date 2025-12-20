@@ -2,6 +2,32 @@ for prom server:
 # wget https://github.com/prometheus/prometheus/releases/download/v3.5.0/prometheus-3.5.0.linux-amd64.tar.gz
 # tar -xvzf prometheus-3.5.0.linux-amd64.tar.gz
 # cd prometheus-3.5.0.linux-amd64/
+
+    static_configs:
+      - targets: ["localhost:9090"]
+       # The label name is added as a label `label_name=<label_value>` to any timeseries scraped from this config.
+        labels:
+          app: "prometheus"
+
+
+  - job_name: "node1_rhel10"
+    static_configs:
+      - targets: ["13.203.23.152:9100"]
+        labels:
+          dc: "IN"
+          app: "db"
+          company: "LW"
+
+  - job_name: "node1_container_nginx"
+    static_configs:
+      - targets: ["13.201.173.103:9113"]
+        labels:
+          dc: "US"
+          app: "web"
+          company: "LW"
+
+
+
 # ./prometheus
 
 for target linux node:
