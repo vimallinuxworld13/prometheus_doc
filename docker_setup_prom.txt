@@ -1,0 +1,194 @@
+   "targets": [
+      "13.126.218.77:9102"
+    ]
+  }
+]
+[root@ip-172-31-39-53 prom]# ls
+data  prometheus  prometheus.yml  targets.json  targets.json.bak
+[root@ip-172-31-39-53 prom]# history
+    1  yum install docker -y
+    2  systemctl start docker
+    3  docker pull prom/prometheus
+    4  docker run -dit --name prom-server -p 9090:9090 prom/prometheus
+    5  docker ps
+    6  docker exec -it prom-server bash
+    7  docker exec -it prom-server sh
+    8  mkdir /prom
+    9  cd /pro
+   10  cd /prom/
+   11  vim prometheus.yaml
+   12  pwd
+   13  docker ps
+   14  docker rm -f prom-server
+   15  cls
+   16  pwd
+   17  ls
+   18  docker run -dit --name prom-server -v /prom/prometheus.yml:/etc/prometheus/prometheus.yml  -p 9090:9090 prom/prometheus
+   19  pwd
+   20  powd
+   21  pwd
+   22  ls
+   23  docker run -dit --name prom-server                   -v /prom:/etc/prometheus/  -p 9090:9090 prom/prometheus
+   24  docker rm -f prom-server
+   25  docker run -dit --name prom-server                   -v /prom:/etc/prometheus/  -p 9090:9090 prom/prometheus
+   26  docker ps
+   27  docker ps  -a
+   28  docker logs prom-server
+   29  ls
+   30  rm -rfv prometheus.yml/
+   31  docker rm -f prom-server
+   32  ls
+   33  #docker run -dit --name prom-server -v /prom/prometheus.yml:/etc/prometheus/prometheus.yml  -p 9090:9090 prom/prometheus
+   34  ls
+   35  mv prometheus.yaml prometheus.yml
+   36  ls
+   37  docker run -dit --name prom-server -v /prom/prometheus.yml:/etc/prometheus/prometheus.yml  -p 9090:9090 prom/prometheus
+   38  docker ps
+   39  pwd
+   40  ls
+   41  docker exec -it prom-server sh
+   42  ls
+   43  cat prometheus.yml
+   44  docker ps
+   45  docker pull prom/node-exporter
+   46  docker run -dit --name node1  -p 9100:9100               prom/node-exporter
+   47  docker ps
+   48  ls
+   49  vim prometheus.yml
+   50  pwd
+   51  ls
+   52  docker ps
+   53  docker rm -f prom-server
+   54  docker run -dit --name prom-server -v /prom/prometheus.yml:/etc/prometheus/prometheus.yml  -p 9090:9090 prom/prometheus
+   55  docker run -dit --name node2  -p 9100:9100               prom/node-exporter
+   56  docker run -dit --name node2  -p 9101:9100               prom/node-exporter
+   57  docker rm -f node2
+   58  docker run -dit --name node2  -p 9101:9100               prom/node-exporter
+   59  docker ps
+   60  ls
+   61  cat prometheus.yml
+   62  vim prometheus.yml
+   63  docker rm -f prom-server
+   64  history
+   65  docker run -dit --name prom-server -v /prom/prometheus.yml:/etc/prometheus/prometheus.yml  -p 9090:9090 prom/prometheus
+   66  docker ps
+   67  ls
+   68  cat prometheus.yml
+   69  pwd
+   70  vim targets.json
+   71  ls
+   72  pwd
+   73  history
+   74  docker rm -f prom-server
+   75  docker run -dit --name prom-server -v /prom/:/etc/prometheus/  -p 9090:9090 prom/prometheus
+   76  docker exec -it prom-server sh
+   77  ls
+   78  docker ps
+   79  vim targets.json
+   80  ls
+   81  vim targets.json
+   82  docker ps
+   83  ls
+   84  vim targets.json
+   85  docker ps
+   86  history
+   87  docker run -dit --name node3  -p 9102:9100               prom/node-exporter
+   88  ls
+   89  docker ps
+   90  ls
+   91  vim targets.json
+   92  cat targets.json
+   93  ls
+   94  docker ps
+   95  ls
+   96  cp targets.json targets.json.bak
+   97  ls
+   98  cat > targets.json
+   99  ls
+  100  cat targets.json
+  101  ls
+  102  cat prometheus.yml
+  103  docker ps
+  104  vim prometheus.yml
+  105  systemctl status docker
+  106  cd /var/run/
+  107  ls
+  108  ls -l
+  109  docker ps
+  110  cd /pro
+  111  cd /prom
+  112  ls
+  113  vim prometheus.yml
+  114  docker ps
+  115  docker rm -f prom-server
+  116  history
+  117  docker run -dit --name prom-server -v /prom/:/etc/prometheus/  -p 9090:9090 prom/prometheus
+  118  docker ps
+  119  cat prometheus.yml
+  120  docker ps
+  121  ls
+  122  cat targets.json
+  123  cat prometheus.yml
+  124  docker ps
+  125  docker run -dit --name node4  -p 9103:9100               prom/node-exporter
+  126  docker ps
+  127  cat prometheus.yml
+  128  docker run -dit --name node5 --label prometheus.scrape=true  -p 9104:9100               prom/node-exporter
+  129  docker ps
+  130  docker ps
+  131  ls
+  132  cat prometheus.yml
+  133  pwd
+  134  docker ps
+  135  docker logs prom-server
+  136  docker rm -f prom-server
+  137  history
+  138  cat prometheus.yml
+  139  docker run -dit --name prom-server -v /prom/:/etc/prometheus/  -v /var/run/docker.sock:/var/run/docker.sock  -p 9090:9090 prom/prometheus
+  140  docker ps
+  141  docker logs prom-server
+  142  docker rm -f prom-server
+  143  docker run --privileged  -dit --name prom-server -v /prom/:/etc/prometheus/  -v /var/run/docker.sock:/var/run/docker.sock  -p 9090:9090 prom/prometheus
+  144  docker ps
+  145  docker logs prom-server
+  146  docker ps
+  147  ls
+  148  cat prometheus.yml
+  149  docker ps
+  150  docker rm -f prom-server
+  151  docker ps
+  152  cd
+  153  wget https://github.com/prometheus/prometheus/releases/download/v3.5.0/prometheus-3.5.0.linux-amd64.tar.gz
+  154  ls
+  155  tar -xvzf prometheus-3.5.0.linux-amd64.tar.gz
+  156  cd prometheus-3.5.0.linux-amd64/
+  157  ls
+  158  ./prometheus  -h
+  159  ./prometheus  --config.file=/prom/prometheus.yml
+  160  ls
+  161  cp prometheus /prom
+  162  cd /prom
+  163  ls
+  164  ./prometheus  --config.file=prometheus.yml &
+  165  ls
+  166  jobs
+  167  docker run -dit --name node6  -p 9107:9100               prom/node-exporter
+  168  docker ps
+  169  docker inspect node6
+  170  docker run -dit --name node7  -p 9108:9100               prom/node-exporter
+  171  docker ps
+  172  docker inspect node7
+  173  cat prometheus
+  174  ls
+  175  cat prometheus.yml
+  176  ls
+  177  docker ps
+  178  pwd
+  179  ls
+  180  cat prometheus.yml
+  181  docker ps
+  182  cat prometheus.yml
+  183  cat targets.json
+  184  cat targets.json.bak
+  185  ls
+  186  history
